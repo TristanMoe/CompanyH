@@ -1,0 +1,15 @@
+@startwbs 
+skinparam monochrome true
+
+* CRISBAG Airport Product Line 
+** Software System 
+*** Screening System
+*** Workstation System 
+** Mechanical System 
+*** Screening System 
+**** Scanners 
+**** SecureScreen RX 5001
+*** Control System 
+*** Transport System 
+**** Main Components  
+@endwbs

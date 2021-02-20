@@ -1,0 +1,24 @@
+@startuml 
+skinparam monochrome true
+
+start 
+:Idea / Change Propasal; 
+repeat 
+repeat
+:Define Change; 
+: Submit / Request Change; 
+  :Access Change Request;
+repeat while (Accepted) is (Insufficient)
+: Approve Change Request; 
+repeat while (Approved) is (Denied)
+: Implment Change Request; 
+if (Verify Change) then (faultless)
+    : Accept New Baseline; 
+else (flawed)
+    : Rollback Implementation; 
+endif 
+: Close Change Request; 
+
+
+stop 
+@enduml
