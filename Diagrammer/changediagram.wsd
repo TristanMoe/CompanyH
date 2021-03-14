@@ -1,24 +1,33 @@
 @startuml 
 skinparam monochrome true
 
+|#gray|Engineering Change Propasal|
 start 
-:Idea / Change Propasal; 
+  :Idea / Change Propasal; 
 repeat 
 repeat
-:Define Change; 
-: Submit / Request Change; 
-  :Access Change Request;
+
+|Change Implementation Plan| 
+  :(Re)Define Change Implementation Plan; 
+  :Submit / Request Plan; 
+  :Access Change Plan;
+  note left
+    Technical Feasibility 
+  end note 
 repeat while (Accepted) is (Insufficient)
-: Approve Change Request; 
+: Approve Change Plan; 
+  note left
+    Business Feasibility  
+  end note 
 repeat while (Approved) is (Denied)
-: Implment Change Request; 
+|#gray|Change Request|
+: Implement Change; 
 if (Verify Change) then (faultless)
     : Accept New Baseline; 
 else (flawed)
     : Rollback Implementation; 
 endif 
 : Close Change Request; 
-
 
 stop 
 @enduml

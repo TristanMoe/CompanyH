@@ -4,7 +4,7 @@ Description     | "                 "
 Requester:      | ^Employee Id^
 Department:     | ^Department Id^
 Change Level    | ^Major / Minor^
-Affect Partied  | ^3rd Party Id^
+Affected Partied  | ^3rd Party Id^
 Component / Solution | ^Component Id^
 Inital Baseline | ^Baseline Version Id^
 New Baseline | "Version Id       "

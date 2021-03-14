@@ -1,0 +1,22 @@
+@startuml
+skinparam monochrome true
+|#white|On-site Airport Staff|
+start 
+: Module breaks;
+if (Spare part available) then (no)
+|#white|On-site Airport Staff|
+    : Find module; 
+|#lightgray|BEUMER Group|
+else (yes)
+    : Call BEUMER support; 
+stop
+endif
+|#white|On-site Airport Staff|
+if (Can be installed by on-site staff?) then (yes)
+    : Install new module; 
+stop 
+else (no)
+|#lightgray|BEUMER Group|
+    : Call 3rd party technician or BEUMER support; 
+stop 
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+skinparam monochrome true
+|#lightgray|BEUMER Group|
+start 
+: Detect module statutory regulation inconsistencies;
+: Decide cause of action; 
+: Contact client;
+|#white|On-site Airport Staff|
+: Integrate new module; 
+
+stop
+@enduml
