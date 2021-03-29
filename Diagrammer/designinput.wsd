@@ -1,0 +1,25 @@
+@startuml
+skinparam monochrome true
+skinparam defaultTextAlignment center
+
+title High-level System Context Diagram
+' RX5001 also scans luggage but not part of system 
+' Tote is technically a building block but only one which is not static
+' and interacts with other actors. 
+
+actor Operator
+actor RX5001 
+actor CRISBAG 
+
+agent "<b> Baggage Handling System" as BHS 
+agent "<b> Tote " as Tote 
+
+Operator --> Tote 
+Operator --> RX5001 
+Operator --> BHS 
+
+BHS --> RX5001 
+BHS --> CRISBAG 
+BHS --> Tote 
+
+@enduml

@@ -1,0 +1,19 @@
+@startwbs
+skinparam monochrome true
+title Product Breakdown Structure  
+* Baggage Handling System
+** Ultimate Control 
+*** Search Area 
+**** Workstations
+***** Hand-held Scanner 
+
+*** Destruction Area 
+**** Destroyed Material* 
+
+** Screening Area 
+*** SecureScreen RX 5001*
+
+** Transportation 
+*** Baggage*
+*** Building Blocks 
+@endwbs 

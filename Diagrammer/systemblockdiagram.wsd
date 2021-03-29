@@ -1,0 +1,34 @@
+@startuml
+skinparam monochrome true
+skinparam defaultTextAlignment center
+
+title System Context Diagram 
+' RX5001 also scans luggage but not part of system 
+' Tote is technically a building block but only one which is not static
+' and interacts with other actors. 
+
+actor Luggage 
+actor Operator
+actor RX5001 
+
+agent "<b><Hardware> \n Workstation" as Work 
+agent "<b><Software> \n Tote Registration System" as ToteSystem
+agent "<b><Hardware> \n Tote " as Tote 
+agent "<b><Software> \n Screening Management System" as SMS 
+agent "<b><Hardware> \n Building Blocks" as BB 
+agent "<b><Software> \n Transport Controller" as TC 
+
+
+Work --> ToteSystem 
+Work --> Tote 
+Work <-- Operator 
+
+RX5001 <-- SMS 
+SMS --> ToteSystem 
+TC --> ToteSystem 
+
+TC --> BB 
+BB --> Tote 
+Tote --> Luggage 
+
+@enduml

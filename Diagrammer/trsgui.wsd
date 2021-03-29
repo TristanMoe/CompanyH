@@ -1,0 +1,28 @@
+@startsalt Tote Registration System
+!startsub TRS
+{+
+    . <b>Tote Registration System
+    {+
+    BARCODE:     | "                 "
+    OPERATOR:    | ^Employee Id^
+    COMMENT:     | "                 "
+    {[<color:green>CLEAR] | [<color:red>REJECT]}
+    }
+    {
+        {/ <b> Totes | Events }
+        {SI
+            {#
+                <b>BARCODE | <b>OPERATOR ID | <b>STATE | <b>OWNER INFO | <b>BAGGAGE ID | <b>FLIGHT NO.
+                34564344314 | 45-AS-DS | STATE 1  | JENS KHAKI | LF-31F | FL-236
+                . | . | . | . | . | . 
+                . | . | . | . | . | . 
+                . | . | . | . | . | . 
+                . | . | . | . | . | . 
+                . | . | . | . | . | . 
+                . | . | . | . | . | . 
+            }
+        }
+    }
+}
+!endsub
+@endsalt
