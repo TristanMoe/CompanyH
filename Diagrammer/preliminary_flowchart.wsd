@@ -6,18 +6,9 @@ start
 :Baggage conveyed to additional screening;
 
 if (Luggage goes through additional screening) then (Rejected)
-  if (Baggage deemed insecure?) then (Yes) 
-    :Baggage is manually removed from system;
-     if (Baggage is too dangerous) then (Yes)
-        :Baggage is destroyed;
-        stop
-    else (No)
-        :Baggage is taken aside\n(further action is out of scope);
-        stop
-    endif
-  else (No)
     :Conveyed to Ultimate control area;
     :Baggage removed from system;
+    :Baggage is transported manually to search area;
     if (Baggage is insecure) then (Yes)
      if (Baggage is too dangerous) then (Yes)
         :Baggage is destroyed;
@@ -26,8 +17,6 @@ if (Luggage goes through additional screening) then (Rejected)
         :Baggage is taken aside\n(further action is out of scope);
         stop
     endif
-    else (No)
-    endif 
   endif  
   :Baggage reintroduced to system;
   
