@@ -1,28 +1,18 @@
 @startuml
 skinparam monochrome true
-package "System"{
-    component "Screening Management System (SMS)" as SMS
-    component "Tote Registration System (TRS)" as TRS
-    component "Conveying Belt (CB)" as CB
-    component "Transport Controller (TC)" as TC
-    database "Totes Database (TDB)" as TDB
-    component Tote
-}
 
-component RX5001
+component "Screening Management System (SMS)" as SMS
+component "Tote Registration System (TRS)" as TRS
+component "Building Blocks (BB)" as BB
+component "Transport Controller (TC)" as TC
 component "Workstation (WS)" as WS
-
-interface WS_CB
-WS -- WS_CB
-CB -- WS_CB
+database "Totes Database (TDB)" as TDB
+component Tote
+component RX5001
 
 interface TC_TRS
 TC -- TC_TRS
 TRS -- TC_TRS
-
-interface TRS_Tote
-TRS -- TRS_Tote
-Tote -- TRS_Tote
 
 interface WS_Tote
 WS -- WS_Tote
@@ -40,11 +30,15 @@ interface TRS_TDB
 TRS -- TRS_TDB
 TDB -- TRS_TDB
 
-interface TC_CB
-TC -- TC_CB
-CB -- TC_CB
+interface TC_BB
+TC -- TC_BB
+BB -- TC_BB
 
 interface TRS_WS
 TRS -- TRS_WS
 WS -- TRS_WS
+
+SMS -[hidden]-> TRS
+TC -[hidden]-> WS
+Tote -[hidden]-> TRS
 @enduml
