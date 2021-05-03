@@ -1,0 +1,44 @@
+@startuml
+skinparam monochrome true
+
+component "Screening Management System (SMS)" as SMS
+component "Tote Registration System (TRS)" as TRS
+component "Building Blocks (BB)" as BB
+component "Transport Controller (TC)" as TC
+component "Workstation (WS)" as WS
+database "Totes Database (TDB)" as TDB
+component Tote
+component RX5001
+
+interface TC_TRS
+TC -- TC_TRS
+TRS -- TC_TRS
+
+interface WS_Tote
+WS -- WS_Tote
+Tote -- WS_Tote
+
+interface SMS_RX5001
+SMS -- SMS_RX5001
+RX5001 -- SMS_RX5001
+
+interface SMS_TRS
+SMS -- SMS_TRS
+TRS -- SMS_TRS
+
+interface TRS_TDB
+TRS -- TRS_TDB
+TDB -- TRS_TDB
+
+interface TC_BB
+TC -- TC_BB
+BB -- TC_BB
+
+interface TRS_WS
+TRS -- TRS_WS
+WS -- TRS_WS
+
+SMS -[hidden]-> TRS
+TC -[hidden]-> WS
+Tote -[hidden]-> TRS
+@enduml
