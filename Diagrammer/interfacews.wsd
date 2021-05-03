@@ -1,0 +1,12 @@
+@startuml
+skinparam monochrome true
+archimate #Technology "Workstation Computer" as ws <<technology-device>>
+
+
+package "Tote Registration System" {
+  HTTP - [Frontend Application]
+  [Frontend Application] - [Server Application]
+}
+
+ws --> HTTP 
+@enduml
